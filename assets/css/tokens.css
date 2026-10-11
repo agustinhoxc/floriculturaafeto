@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Afeto — tokens de design
+   Paleta oficial da cliente + derivações para acessibilidade (contraste AA).
+   ========================================================================== */
+:root {
+  /* Paleta da marca (fornecida pela cliente) */
+  --c-terracota: #D9614A;      /* assinatura: detalhes, ilustrações, títulos grandes */
+  --c-creme: #F8F2EA;          /* fundo predominante */
+  --c-blush: #EBC4BE;          /* seções românticas */
+  --c-madeira: #E6D3B6;        /* superfícies e fundos alternativos */
+  --c-folha: #4E6B3E;          /* detalhes botânicos */
+  --c-cafe: #3D2B26;           /* texto principal */
+
+  /* Derivações (não substituem a paleta; garantem legibilidade) */
+  --c-terracota-funda: #A9432D; /* botões e links pequenos: 5,3:1 sobre o creme */
+  --c-terracota-escura: #8E3724;/* hover do botão */
+  --c-creme-2: #F2E8DB;         /* creme um tom abaixo, para alternar planos */
+  --c-blush-claro: #F5E1DD;
+  --c-madeira-clara: #F0E5D3;
+  --c-cafe-suave: #6B5550;      /* texto secundário: 6,2:1 sobre o creme */
+  --c-cafe-linha: rgba(61, 43, 38, .14);
+  --c-sobre-escuro: #F3E7DC;    /* texto sobre café */
+
+  /* Tipografia */
+  --f-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-texto: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Escala (base 17px, razão ~1,25; títulos fluidos) */
+  --t-xs: .8125rem;
+  --t-sm: .9375rem;
+  --t-base: 1.0625rem;
+  --t-md: 1.25rem;
+  --t-lg: clamp(1.375rem, 1.1rem + .9vw, 1.75rem);
+  --t-xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  --t-2xl: clamp(2.25rem, 1.5rem + 3.2vw, 3.75rem);
+  --t-display: clamp(2.75rem, 1.5rem + 4.4vw, 5.5rem);
+
+  /* Espaço */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.5rem;
+  --s-6: 2rem; --s-7: 3rem; --s-8: 4rem; --s-9: 6rem; --s-10: 8rem;
+  --secao: clamp(4.5rem, 3rem + 6vw, 9rem);
+  --gutter: clamp(1.25rem, .6rem + 3.2vw, 4rem);
+  --largura: 1320px;
+  --texto-max: 36rem;
+
+  /* Forma e movimento */
+  --raio-sm: 3px;
+  --raio: 6px;
+  --raio-pill: 999px;
+  --sombra-leve: 0 1px 2px rgba(61, 43, 38, .06), 0 8px 24px -12px rgba(61, 43, 38, .18);
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur: .28s;
+
+  --header-h: 76px;
+}
+
+@media (max-width: 720px) {
+  :root { --header-h: 64px; }
+}
